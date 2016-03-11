@@ -32,7 +32,7 @@ private:
         for(int i=n-1; i>0; --i){
             auto a = next(S.begin(), k/base);    //a1 = k1/(n-1)!;
             result.push_back(*a);
-            S.erase(a);     //erase after pushing is safe cause seq is unique;
+            S.erase(a);     //erase means jump off pushed values by the algorithm side;
             k %= base;       // k2 = k%(n-1)!;
             base /= i;      //(n-1)! ---> (n-2)!;
         }
